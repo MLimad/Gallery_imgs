@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns:auto auto auto ;
+  grid-gap: 8px;
+  padding: 15px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px
+}
+
+.item{
+  border-radius: 10px;
+  color: #2b2b2b;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+
+}
+
+.item img{
+  position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s
+}
+
+.item:nth-child(6){
+
+  grid-column: 2/4;
+  grid-row: 2/4;
+  width: 100%;
+  height: 100%;
+
+}
+
+.box{
+  cursor: pointer;
+  filter: grayscale(70%);
+
+}
+
+.box img:hover{
+  filter: grayscale(0);
+  transform: rotate(10deg) scale(1.2);
+}
+
+.resume{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-image: linear-gradient(to top, rgba(0, 0, 0,0.9) , transparent);
+  z-index: 1;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 20px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+}
+
+.timeImg{
+  font-weight: lighter;
+  z-index: 1;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
+h2{
+  grid-column: 1/4;
+  padding: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+h2::before{
+  position: absolute;
+  content: '';
+  left: 8px;
+  bottom: 5px;
+  border: 1px solid black;
+  width: 15%;
+
+
+}
+
+h2::after{
+  position: absolute;
+  content: '';
+  left: 15px;
+  bottom: 4px;
+  border: 2px solid black;
+  width: 3%;
+
+
+}
+
+.fadeIn{
+  animation: fadeIn 2s;
+}
+.fadeOut{
+  animation: none;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
